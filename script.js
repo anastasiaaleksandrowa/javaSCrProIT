@@ -68,3 +68,19 @@ function addReview() {
 
     displayProducts();
 }
+
+function deleteReview(product, index) {
+    const reviews = getReviews();
+
+    if (reviews[product]) {
+        reviews[product].splice(index, 1);
+
+        if (reviews[product].length === 0) {
+            delete reviews[product];
+        }
+
+        saveReviews(reviews);
+
+        displayProducts();
+    }
+}
