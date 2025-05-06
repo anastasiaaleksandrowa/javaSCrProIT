@@ -84,3 +84,7 @@ function deleteReview(product, index) {
         displayProducts();
     }
 }
+document.getElementById('add-review').addEventListener('click', addReview);
+
+
+displayProducts();
