@@ -40,3 +40,31 @@ function displayProducts() {
         productsContainer.appendChild(productDiv);
     }
 }
+
+function addReview() {
+    const productNameInput = document.getElementById('product-name');
+    const reviewTextInput = document.getElementById('review-text');
+
+    const productName = productNameInput.value.trim();
+    const reviewText = reviewTextInput.value.trim();
+
+    if (!productName || !reviewText) {
+        alert("Пожалуйста, заполните все поля.");
+        return;
+    }
+
+    const reviews = getReviews();
+
+    if (!reviews[productName]) {
+        reviews[productName] = [];
+    }
+
+    reviews[productName].push({ text: reviewText });
+
+    saveReviews(reviews);
+
+    productNameInput.value = '';
+    reviewTextInput.value = '';
+
+    displayProducts();
+}
