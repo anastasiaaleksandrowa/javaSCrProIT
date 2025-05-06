@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система отзывов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        .product {
+            margin-top: 20px;
+            cursor: pointer;
+            color: blue;
+        }
+        
+        .review {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .delete-button {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Добавить отзыв о продукте</h1>
+
+    <label for="product-name">Название продукта:</label><br>
+    <input type="text" id="product-name"><br>
+
+    <label for="review-text">Ваш отзыв:</label><br>
+    <textarea id="review-text" rows="4" cols="50"></textarea><br>
+
+    <button id="add-review">Добавить отзыв</button>
+
+    <h2>Список продуктов с отзывами</h2>
+    <div id="products-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
